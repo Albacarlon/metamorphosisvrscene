@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+  <!-- Metamorphosis VR Experience by Alba Alonso Carrasco & Jose L. Rubio Tamayo-->
+ 
+  <head>
+    ...
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-babia-components/dist/aframe-babia-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene fog="type: exponential; color: #ffffff; density: 0.15; near: 0; far: 30">
+      <!-- Environment -->
+
+      <a-sky src="https://cdn.glitch.global/6129616c-d685-405f-9e5a-3869316b8be0/entorno_universidad0001.jpg?v=1655202508267" rotation="0 0 0"></a-sky>
+
+      <!-- Light 
+      <a-light type="point" intensity="3" position="0 2.9 0" color ="#8c004b"></a-light>
+      <a-light type="point" intensity="1" position="4 2.9 0" color ="#FF0000"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 0" color ="#00FFff"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -2" color ="#04ff16"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -4" color ="#00deff"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -6" color ="#FF0000"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 2" color ="#FF00FF"></a-light>-->
+      <a-light type="point" intensity="0.5" position="5 1 2" color ="#FFFFFF"></a-light>
+      <!-- Camera -->
+      <a-entity movement-controls="fly: true" position="0 0 4">
+        <a-entity camera position="0 1.6 0" look-controls></a-entity>
+        <a-entity cursor="rayOrigin:mouse"></a-entity>
+        <a-entity laser-controls="hand: right"></a-entity>
+      </a-entity>
+
+      <!-- Reference sphere
+       <a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
+        -->
+
+      <!-- Floor -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="0.1" width="15" position="0 0 0"></a-box>
+
+      <!-- Front wall (1) -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="3" width="0.5" position="0 1.5 -6" rotation="0 90 0"></a-box>
+      
+      <!-- Right wall (2) -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="3" width="0.5" position="6 1.5 0" rotation="0 0 0"></a-box>
+      
+       <!--Left wall (2) -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="3" width="0.5" position="-6 1.5 0" rotation="0 0 0"></a-box>
+
+      <!-- Back wall (3) -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="3" width="0.5" position="0 1.5 6" rotation="0 90 0"></a-box>
+
+      <!-- Techo -->
+      <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="0.1" width="40" position="0 3 0" rotation="180 0 0"></a-box>
+     
+     
+      <!--Sounds
+      <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
+         -->
+      
+      <a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: url(https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/rain-and-thunder-16705.mp3?v=1699030725470); autoplay: true"></a-entity>
+
+      <!--Music
+      <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
+         -->
+      
+      <a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: url(https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/ES_An%20Alluring%20Encounter%20-%20Jules%20Gaia.mp3?v=1699089280395); autoplay: true"></a-entity>
+      
+    <!--apple
+     
+      <a-assets>
+        <a-asset-item id="apple" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco_002.glb?v=1669205369987"></a-asset-item>
+      </a-assets> -->
+      
+       <a-assets>
+        <a-asset-item id="apple" src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/apple.glb?v=1699029463544"></a-asset-item>
+      </a-assets>
+      
+      <a-entity gltf-model="#apple" scale="0.025 0.025 0.025" position="0 0 0" animation-mixer></a-entity>
+     
+      <!--window
+     
+      <a-assets>
+        <a-asset-item id="window" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco_002.glb?v=1669205369987"></a-asset-item>
+      </a-assets> -->
+      
+       <a-assets>
+        <a-asset-item id="window" src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/window.glb?v=1699032049333"></a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model="#window" scale="0.025 0.025 0.025" position="7 0.5 0" animation-mixer></a-entity>
+      
+       <!--door
+     
+      <a-assets>
+        <a-asset-item id="door" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco_002.glb?v=1669205369987"></a-asset-item>
+      </a-assets> -->
+      
+      <a-assets>
+        <a-asset-item id="door" src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/door.glb?v=1699033393451"></a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model="#door" scale="0.01 0.01 0.01" position="5.5 1.2 4" animation-mixer></a-entity>
+                                                                    
+
+    </a-scene>
+  </body>
+
+</html>
