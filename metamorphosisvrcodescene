@@ -2,7 +2,7 @@
 <html lang="en">
 
  
-  <!-- Metamorphosis VR Experience by Alba Alonso Carrasco & Jose L. Rubio Tamayo-->
+  <!-- Metamorphosis VR Experience by Alba Alonso Carrasco and Jose L. Rubio Tamayo-->
  
   <head>
     ...
@@ -53,24 +53,22 @@
       <!-- Back wall (3) -->
       <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="3" width="0.5" position="0 1.5 6" rotation="0 90 0"></a-box>
 
-      <!-- Techo -->
+      <!-- Ceiling -->
       <a-box src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/Mesa%20de%20trabajo%201.png?v=1699088257156" depth="40" height="0.1" width="40" position="0 3 0" rotation="180 0 0"></a-box>
      
      
-      <!--Sounds
-      <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
-         -->
-      
-      <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: url(https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/rain-and-thunder-16705.mp3?v=1699030725470); autoplay: true"></a-entity>
-
       <!--Music
       <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
          -->
       
-      <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: url(https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/ES_An%20Alluring%20Encounter%20-%20Jules%20Gaia.mp3?v=1699089280395); autoplay: true"></a-entity>
+       <a-sound src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/ES_An%20Alluring%20Encounter%20-%20Jules%20Gaia.mp3?v=1699089280395" autoplay="true" position="0 0 0" loop="true"></a-sound>
       
+      <!--Sound
+      <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
+         -->
+      
+       <a-sound src="https://cdn.glitch.global/bfde2762-30fe-4954-8f86-00b121e2ddfe/rain-and-thunder-16705.mp3?v=1699030725470" autoplay="true" position="0 0 0" loop="true"></a-sound>
+     
     <!--apple
      
       <a-assets>
@@ -106,7 +104,6 @@
       </a-assets>
 
       <a-entity gltf-model="#door" scale="0.01 0.01 0.01" position="5.5 1.2 4" animation-mixer></a-entity>
-                                                                    
 
     </a-scene>
   </body>
